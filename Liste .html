@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Panier malin</title>
+<link rel="icon" href="data:image/png;base64,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">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Panier malin">
+<meta name="theme-color" content="#2F4BFF">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#EEF3EF;--ink:#16302B;--mute:#5E736D;--line:#C9D6CF;--blue:#2F4BFF;--note:#FFE066;--ok:#1B7F4B}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.5 "DM Sans",system-ui,sans-serif}
+main{max-width:600px;margin:0 auto;padding:28px 18px 80px}
+h1{font:800 clamp(32px,9vw,46px)/1.05 "Bricolage Grotesque",system-ui,sans-serif;margin:0 0 6px;letter-spacing:-.02em}
+h2{font:600 18px "Bricolage Grotesque",system-ui,sans-serif;margin:0 0 8px}
+.sub,.src{color:var(--mute);margin:0 0 20px}
+.src{font-size:13px;margin:8px 0 0}
+form{display:flex;gap:8px}
+input[type=text],input[type=number]{font:inherit;padding:11px 12px;border:2px solid var(--ink);border-radius:10px;background:#fff;color:var(--ink);min-width:0}
+#in{flex:1}
+button{font:500 15px "DM Sans",system-ui,sans-serif;cursor:pointer;border-radius:10px;border:2px solid var(--blue);padding:10px 14px;background:var(--blue);color:#fff}
+button.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+button:focus-visible,input:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+.sug{margin-top:20px}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chips button{background:var(--note);color:var(--ink);border:0;border-radius:3px;padding:8px 13px;box-shadow:2px 3px 0 rgba(22,48,43,.25);transition:transform .15s}
+.chips button:nth-child(odd){transform:rotate(-1.5deg)}
+.chips button:nth-child(even){transform:rotate(1.2deg)}
+.chips button:hover{transform:rotate(0) translateY(-2px)}
+ul{list-style:none;margin:22px 0 0;padding:0;border-top:1px solid var(--line)}
+li{border-bottom:1px solid var(--line);padding:10px 2px}
+.row{display:flex;align-items:center;gap:8px}
+.row label{flex:1;display:flex;align-items:center;gap:10px;cursor:pointer;word-break:break-word}
+.row input[type=checkbox]{width:22px;height:22px;accent-color:var(--blue);flex:none}
+li.done .nm{text-decoration:line-through;color:var(--mute)}
+.q{display:flex;align-items:center;gap:4px}
+.q button,.del{background:none;color:var(--ink);border:1px solid var(--line);padding:2px 9px;font-size:18px;line-height:1.2}
+.del{border:0;color:var(--mute);font-size:22px}
+.th{width:42px;height:42px;object-fit:contain;background:#fff;border-radius:6px;flex:none}
+.scan{width:100%;margin-top:10px}
+.panel{margin:10px 0 4px 32px;padding:12px;background:#fff;border-radius:10px}
+.panel .bc{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+.panel .bc input{flex:1;min-width:120px}
+.pr{display:grid;grid-template-columns:1fr 90px;gap:2px 10px;align-items:center;padding:5px 0}
+.pr small{grid-column:1/3;color:var(--mute);font-size:12px;margin-top:-4px}
+.tot{margin-top:28px}
+.t{display:flex;justify-content:space-between;gap:10px;padding:9px 12px;background:#fff;border-radius:10px;margin-bottom:6px}
+.t.best{outline:3px solid var(--ok)}
+.t b{font-variant-numeric:tabular-nums}
+.t small{color:var(--mute);display:block}
+.t .r{text-align:right}
+.t a{display:block;font-size:13px;color:var(--blue);margin-top:2px}
+.tag{color:var(--ok);font-weight:500}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+#cam{width:100%;border-radius:10px;margin-top:10px;background:#000}
+#toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:10px 18px;border-radius:10px;opacity:0;pointer-events:none;transition:opacity .2s}
+#toast.on{opacity:1}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<main>
+  <h1>Ma liste de courses</h1>
+  <p class="sub">Ajoute tes articles, compare les prix entre six magasins.</p>
+  <form id="f">
+    <input type="text" id="in" placeholder="Ex. pâte à pizza" aria-label="Nouvel article" maxlength="60" autocomplete="off">
+    <button type="submit">Ajouter</button>
+  </form>
+  <button class="ghost scan" id="scanbtn" type="button">Scanner un produit</button>
+  <video id="cam" hidden playsinline muted title="Touche pour fermer"></video>
+  <p class="src">Le nom et la photo du produit viennent d’Open Food Facts.</p>
+  <section class="sug" id="sug" hidden>
+    <h2>Il manque peut-être</h2>
+    <div class="chips" id="chips"></div>
+    <p class="src">Source : associations d’idées intégrées à l’appli, pas une IA en direct.</p>
+  </section>
+  <p class="sub" id="empty" style="margin-top:22px">Ta liste est vide. Essaie « pâte à pizza » ou « crêpes ».</p>
+  <ul id="list"></ul>
+  <section class="tot" id="tot" hidden>
+    <h2>Total par magasin</h2>
+    <button class="ghost" id="copybtn" type="button" style="margin-bottom:10px">Copier ma liste pour le drive</button>
+    <div id="totals"></div>
+    <p class="src">Sources des prix : ceux que tu saisis, les relevés d’Open Prices (base collaborative d’Open Food Facts, via le code-barres), ou à défaut une estimation indicative. Les estimations viennent d’un tableau intégré d’ordres de grandeur, pas de vrais prix en rayon. Pour commander, copie ta liste puis ouvre le site du magasin : aucun magasin ne permet d’ajouter des articles à son panier depuis une autre appli, il faut les chercher et les ajouter toi-même. Le magasin le moins cher n’est désigné que si tous les articles y ont un prix.</p>
+  </section>
+  <div class="actions">
+    <button id="share">Partager la liste</button>
+    <button class="ghost" id="clear">Retirer les articles cochés</button>
+  </div>
+</main>
+<div id="toast" role="status" aria-live="polite"></div>
+<script>
+const KEY='panier-malin-2';
+const STORES=['Lidl','Carrefour Market','Intermarché','Super U','Aldi','Auchan'];
+const URLS={'Lidl':'https://www.lidl.fr','Carrefour Market':'https://www.carrefour.fr','Intermarché':'https://www.intermarche.com','Super U':'https://www.coursesu.com','Aldi':'https://www.aldi.fr','Auchan':'https://www.auchan.fr'};
+const KEYS=['lidl','carrefour','intermarche','super u','aldi','auchan'];
+const MULT=[1,1.15,1.1,1.12,.97,1.08];
+const EST={'coquillette':1.2,'spaghetti':1.2,'penne':1.2,'tagliatelle':1.2,'pate a pizza':1.6,'pate a tartiner':3.2,'pate':1.2,'riz':1.8,'lait':1.1,'oeuf':3,'pain':1.3,'beurre':2.5,'fromage rape':1.8,'fromage':2.2,'sauce tomate':1.5,'mozzarella':1.2,'jambon':2.4,'farine':1.2,'sucre':1.3,'poulet':6.5,'yaourt':2.2,'chips':1.9,'soda':1.8,'coca':2.2,'tomate':2.5,'salade':1.3,'cafe':3.5,'chocolat':2,'cereale':3,'steak':5,'lardons':2,'creme':1.3,'champignon':1.8,'thon':2.3};
+const SUG={'pizza':['sauce tomate','mozzarella','jambon','champignons','origan'],'coquillette':['sauce tomate','gruyère râpé','jambon'],'pate':['sauce tomate','parmesan','gruyère râpé','lardons'],'riz':['poulet','légumes','sauce soja','curry'],'poulet':['riz','citron','crème fraîche','pommes de terre'],'steak':['pommes de terre','haricots verts','moutarde'],'burger':['pains à burger','cheddar','salade','oignons','ketchup'],'pain':['beurre','confiture','fromage'],'lait':['céréales','café','chocolat en poudre'],'oeuf':['lardons','fromage râpé','pain de mie'],'crepe':['farine','lait','oeufs','sucre','pâte à tartiner'],'farine':['oeufs','sucre','levure','beurre'],'gateau':['farine','sucre','oeufs','beurre','chocolat'],'tacos':['tortillas','poulet','salade','tomates','fromage râpé'],'salade':['tomates','concombre','vinaigrette','thon'],'chips':['soda','houmous','sauce'],'soda':['chips','glaçons','gobelets'],'yaourt':['fruits','miel','muesli'],'barbecue':['saucisses','merguez','charbon','pain'],'anniversaire':['bougies','gâteau','ballons','boissons']};
+const norm=s=>s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[’]/g,"'").trim();
+const $=id=>document.getElementById(id);
+const eur=v=>v.toFixed(2).replace('.',',')+' €';
+let items=[];
+function load(){try{items=JSON.parse(localStorage.getItem(KEY))||[]}catch(e){items=[]}}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(items))}catch(e){}}
+function toast(m){const t=$('toast');t.textContent=m;t.classList.add('on');setTimeout(()=>t.classList.remove('on'),2600)}
+function clean(x){const p={};if(x.p)STORES.forEach(s=>{const e=x.p[s];if(e&&isFinite(+e.v)&&typeof e.s==='string')p[s]={v:+e.v,s:e.s.slice(0,16)}});return{t:String(x.t).slice(0,80),img:/^https:\/\//.test(x.img||'')?String(x.img).slice(0,300):'',q:Math.min(99,Math.max(1,+x.q||1)),d:!!x.d,code:String(x.code||'').replace(/\D/g,'').slice(0,14),p:p}}
+function fromHash(){
+  const m=location.hash.match(/^#liste=(.+)$/);if(!m)return;
+  try{const l=JSON.parse(decodeURIComponent(escape(atob(m[1]))));
+    if(Array.isArray(l)&&(!items.length||confirm('Remplacer ta liste par la liste reçue ?'))){items=l.slice(0,100).map(clean);save()}
+  }catch(e){}
+  history.replaceState(null,'',location.pathname+location.search);
+}
+function est(t,k){const n=norm(t);for(const key in EST)if(n.includes(key))return Math.round(EST[key]*MULT[k]*100)/100;return null}
+function pf(it,k){const u=it.p&&it.p[STORES[k]];if(u)return u;const e=est(it.t,k);return e==null?null:{v:e,s:'est'}}
+function lab(s){return s==='user'?'Saisi par toi':s==='est'?'Estimation indicative, non vérifiée':'Open Prices, relevé du '+s.slice(3)}
+function suggestions(){const ns=items.map(i=>norm(i.t)),out=[];
+  for(const k in SUG)if(ns.some(n=>n.includes(k)))for(const s of SUG[k]){const ss=norm(s);if(!ns.some(n=>n.includes(ss)||ss.includes(n))&&!out.includes(s))out.push(s)}
+  return out.slice(0,8)}
+function add(t){t=t.trim();if(!t)return;items.push({t,q:1,d:false,code:'',p:{}});save();render()}
+
+async function lookup(i){
+  const it=items[i];if(!it.code){toast('Entre d’abord un code-barres');return}
+  try{
+    const r=await fetch('https://prices.openfoodfacts.org/api/v1/prices?product_code='+encodeURIComponent(it.code)+'&order_by=-date&size=50');
+    if(!r.ok)throw 0;const j=await r.json();let n=0;
+    STORES.forEach((s,k)=>{
+      const f=(j.items||[]).find(x=>x.currency==='EUR'&&x.location&&norm(x.location.osm_name||'').includes(KEYS[k]));
+      if(f&&isFinite(+f.price)){it.p[s]={v:+f.price,s:'op:'+String(f.date||'').slice(0,10)};n++}
+    });
+    save();render();toast(n?n+' prix trouvé'+(n>1?'s':'')+' sur Open Prices':'Aucun prix pour ces magasins sur Open Prices');
+  }catch(e){toast('Open Prices est injoignable pour l’instant')}
+}
+let zr=null;
+function stop(){const v=$('cam');v.hidden=true;if(zr){try{zr.reset()}catch(e){}zr=null}if(v.srcObject){v.srcObject.getTracks().forEach(t=>t.stop());v.srcObject=null}}
+function loadZX(){return new Promise((ok,ko)=>{if(window.ZXing)return ok();const s=document.createElement('script');s.src='https://cdn.jsdelivr.net/npm/@zxing/library@0.20.0/umd/index.min.js';s.onload=ok;s.onerror=ko;document.head.append(s)})}
+async function startScan(cb){
+  const v=$('cam');v.hidden=false;v.onclick=stop;v.scrollIntoView({block:'center'});
+  const done=c=>{stop();cb(String(c))};
+  try{
+    if('BarcodeDetector' in window){
+      v.srcObject=await navigator.mediaDevices.getUserMedia({video:{facingMode:'environment'}});await v.play();
+      const d=new BarcodeDetector({formats:['ean_13','ean_8','upc_a']});
+      const loop=async()=>{if(v.hidden)return;try{const r=await d.detect(v);if(r.length)return done(r[0].rawValue)}catch(e){}requestAnimationFrame(loop)};loop();
+    }else{
+      await loadZX();zr=new ZXing.BrowserMultiFormatReader();
+      zr.decodeFromConstraints({video:{facingMode:'environment'}},v,res=>{if(res&&!v.hidden)done(res.getText())});
+    }
+  }catch(e){stop();const c=prompt('Caméra indisponible. Tape le code-barres :');if(c)cb(c)}
+}
+async function addByCode(code){
+  code=code.replace(/\D/g,'').slice(0,14);
+  if(code.length<8){toast('Code-barres invalide');return}
+  const ex=items.findIndex(x=>x.code===code);
+  if(ex>=0){items[ex].q=Math.min(99,items[ex].q+1);save();render();toast('Quantité augmentée');return}
+  let name='',img='';
+  try{
+    const r=await fetch('https://world.openfoodfacts.org/api/v2/product/'+code+'.json?fields=product_name,brands,quantity,image_front_small_url');
+    const j=await r.json();
+    if(j.status===1&&j.product){const p=j.product;name=[p.product_name,(p.brands||'').split(',')[0],p.quantity].filter(Boolean).join(', ');img=p.image_front_small_url||''}
+  }catch(e){}
+  if(!name){name=(prompt('Produit introuvable. Donne-lui un nom :')||'').trim();if(!name)return}
+  items.push({t:name.slice(0,80),img:/^https:\/\//.test(img)?img.slice(0,300):'',q:1,d:false,code,p:{}});
+  save();render();lookup(items.length-1);
+}
+
+function render(){
+  const ul=$('list');ul.textContent='';
+  items.forEach((it,i)=>{
+    const li=document.createElement('li');if(it.d)li.className='done';
+    const row=document.createElement('div');row.className='row';
+    const lb=document.createElement('label');
+    const cb=document.createElement('input');cb.type='checkbox';cb.checked=it.d;cb.onchange=()=>{it.d=cb.checked;save();render()};
+    const nm=document.createElement('span');nm.className='nm';nm.textContent=it.t;
+    if(it.img){const im=document.createElement('img');im.src=it.img;im.alt='';im.className='th';im.referrerPolicy='no-referrer';lb.append(cb,im,nm)}else lb.append(cb,nm);
+    const q=document.createElement('div');q.className='q';
+    const mi=document.createElement('button');mi.textContent='−';mi.setAttribute('aria-label','Moins');mi.onclick=()=>{it.q=Math.max(1,it.q-1);save();render()};
+    const qn=document.createElement('span');qn.textContent=it.q;
+    const pl=document.createElement('button');pl.textContent='+';pl.setAttribute('aria-label','Plus');pl.onclick=()=>{it.q=Math.min(99,it.q+1);save();render()};
+    q.append(mi,qn,pl);
+    const pb=document.createElement('button');pb.className='ghost';pb.textContent='Prix';pb.onclick=()=>{it.open=!it.open;render()};
+    const del=document.createElement('button');del.className='del';del.textContent='×';del.setAttribute('aria-label','Supprimer '+it.t);del.onclick=()=>{items.splice(i,1);save();render()};
+    row.append(lb,q,pb,del);li.append(row);
+    if(it.open){
+      const pn=document.createElement('div');pn.className='panel';
+      const bc=document.createElement('div');bc.className='bc';
+      const ci=document.createElement('input');ci.type='text';ci.inputMode='numeric';ci.placeholder='Code-barres';ci.value=it.code||'';ci.setAttribute('aria-label','Code-barres');
+      ci.onchange=()=>{it.code=ci.value.replace(/\D/g,'').slice(0,14);save()};
+      const sb=document.createElement('button');sb.className='ghost';sb.textContent='Scanner';sb.onclick=()=>startScan(c=>{it.code=c.replace(/\D/g,'').slice(0,14);save();render();lookup(i)});
+      const lk=document.createElement('button');lk.textContent='Chercher les prix';lk.onclick=()=>{it.code=ci.value.replace(/\D/g,'').slice(0,14);lookup(i)};
+      bc.append(ci,sb,lk);pn.append(bc);
+      STORES.forEach((s,k)=>{
+        const p=pf(it,k);
+        const r=document.createElement('div');r.className='pr';
+        const l=document.createElement('span');l.textContent=s;
+        const inp=document.createElement('input');inp.type='number';inp.step='0.01';inp.min='0';inp.setAttribute('aria-label','Prix '+s);
+        if(p)inp.value=p.v;inp.placeholder='€';
+        inp.onchange=()=>{const v=parseFloat(inp.value.replace(',','.'));if(isFinite(v)&&v>=0)it.p[s]={v,s:'user'};else delete it.p[s];save();render()};
+        const sm=document.createElement('small');sm.textContent=p?lab(p.s):'Aucun prix connu';
+        r.append(l,inp,sm);pn.append(r);
+      });
+      li.append(pn);
+    }
+    ul.append(li);
+  });
+  $('empty').hidden=items.length>0;
+  const s=suggestions(),c=$('chips');c.textContent='';
+  s.forEach(x=>{const b=document.createElement('button');b.type='button';b.textContent='+ '+x;b.onclick=()=>add(x);c.append(b)});
+  $('sug').hidden=!s.length;
+  const todo=items.filter(i=>!i.d);$('tot').hidden=!todo.length;
+  const rows=STORES.map((s,k)=>{let sum=0,miss=0,es=0;
+    todo.forEach(it=>{const p=pf(it,k);if(!p)miss++;else{sum+=p.v*it.q;if(p.s==='est')es++}});
+    return{s,sum,miss,es}});
+  const full=rows.filter(r=>!r.miss);const best=full.length?Math.min(...full.map(r=>r.sum)):null;
+  const tt=$('totals');tt.textContent='';
+  rows.slice().sort((a,b)=>a.miss-b.miss||a.sum-b.sum).forEach(r=>{
+    const d=document.createElement('div');d.className='t'+(!r.miss&&r.sum===best?' best':'');
+    const l=document.createElement('div');l.textContent=r.s;
+    const sm=document.createElement('small');
+    sm.textContent=(r.miss?r.miss+' article'+(r.miss>1?'s':'')+' sans prix. ':'')+(r.es?r.es+' prix estimé'+(r.es>1?'s':'')+'.':'');
+    if(sm.textContent)l.append(sm);
+    if(!r.miss&&r.sum===best){const g=document.createElement('span');g.className='tag';g.textContent='Le moins cher';l.append(g)}
+    const rt=document.createElement('div');rt.className='r';
+    const b=document.createElement('b');b.textContent=eur(r.sum);
+    const a=document.createElement('a');a.href=URLS[r.s];a.target='_blank';a.rel='noopener';a.textContent='Ouvrir le site';
+    rt.append(b,a);d.append(l,rt);tt.append(d);
+  });
+}
+$('f').onsubmit=e=>{e.preventDefault();add($('in').value);$('in').value='';$('in').focus()};
+$('clear').onclick=()=>{items=items.filter(i=>!i.d);save();render()};
+$('share').onclick=()=>{
+  if(!items.length){toast('Ajoute d’abord un article');return}
+  const url=location.href.split('#')[0]+'#liste='+btoa(unescape(encodeURIComponent(JSON.stringify(items.map(({open,...r})=>r)))));
+  if(navigator.clipboard)navigator.clipboard.writeText(url).then(()=>toast('Lien copié')).catch(()=>prompt('Copie ce lien :',url));
+  else prompt('Copie ce lien :',url);
+};
+$('copybtn').onclick=()=>{
+  const todo=items.filter(i=>!i.d);if(!todo.length){toast('Ta liste est vide');return}
+  const txt='Ma liste de courses\n'+todo.map(i=>'- '+i.q+' x '+i.t).join('\n');
+  if(navigator.clipboard)navigator.clipboard.writeText(txt).then(()=>toast('Liste copiée, colle-la dans l’appli du magasin')).catch(()=>prompt('Copie ta liste :',txt));
+  else prompt('Copie ta liste :',txt);
+};
+$('scanbtn').onclick=()=>startScan(addByCode);
+load();fromHash();render();
+</script>
+</body>
+</html>
